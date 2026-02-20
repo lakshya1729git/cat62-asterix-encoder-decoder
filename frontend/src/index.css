@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 2px; }
+
+/* Glass card */
+.glass-card {
+  background: rgba(8, 14, 36, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+}
+
+/* Hide file input button */
+input[type='file']::file-selector-button { display: none; }

@@ -1,0 +1,29 @@
+# CAT62 ASTERIX Encoder/Decoder — Backend Dependencies
+# ======================================================
+# Install with:  pip install -r requirements.txt
+# Run with:      uvicorn main:app --reload
+
+# --- Web framework ---
+fastapi>=0.111.0
+
+# --- ASGI server ---
+uvicorn[standard]>=0.29.0
+
+# --- Multipart form/file upload support (required by FastAPI for UploadFile) ---
+python-multipart>=0.0.9
+
+# --- Standard library modules used (no install required) ---
+# math      — ground speed / heading computation
+# datetime  — ISO timestamp parsing and reconstruction
+# struct    — fixed-point binary encoding / decoding
+# logging   — structured debug output
+# io        — streaming response buffer
+# json      — JSON parsing
+
+# Note on "libasterix":
+# The ASTERIX binary protocol is implemented from first principles in
+# asterix_wrapper.py following the EUROCONTROL CAT062 Edition 1.19 specification.
+# All encoding and decoding is performed using Python's struct, math, and datetime
+# standard-library modules — no external ASTERIX library is required.
+# This approach gives full control over bit-level encoding and guarantees
+# spec-compliant output without depending on third-party library completeness.
